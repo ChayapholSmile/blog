@@ -1,10 +1,15 @@
 {% assign words = content | number_of_words %}
 
 {% if words < 360 %}
-  {% assign totalMinutes = 1 %}
+  {% assign mintotalMinutes = 1 %}
+  {% assign maxtotalMinutes = 1 %}
 {% else %}
   {% assign mintotalMinutes = words | divided_by:180 %}
   {% assign maxtotalMinutes = words | divided_by:200 %}
 {% endif %}
-
-{% assign minutesText = mintotalMinutes | append: ' - ' | append: maxtotalMinutes | append: ' mins to read.' %}
+  
+{% if mintotalMinutes = maxtotalMinutes %}
+  {% assign minutesText = mintotalMinutes | append: ' - ' | append: maxtotalMinutes | append: ' mins to read.' %}
+{% else %}
+{% assign minutesText = maxtotalMinutes | append: ' mins to read.' %}
+{% endif %}
