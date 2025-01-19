@@ -3,8 +3,8 @@
 {% if words < 360 %}
   {% assign totalMinutes = 1 %}
 {% else %}
-  {% assign mintotalMinutes = words | divided_by:180 %}
-  {% assign maxtotalMinutes = words | divided_by:200 %}
+  {% assign totalMinutes = words | divided_by:180 %}
+  {% assign totalMinutes = words | divided_by:200 %}
 {% endif %}
 
-{% append: 'เวลาการอ่านโดยประมาณ ' |assign minutesText = mintotalMinutes | append: ' - ' | assign minutesText = maxtotalMinutes | append: ' นาที' %}
+{% assign minutesText = mintotalMinutes | append: ' mins to read.' %}
