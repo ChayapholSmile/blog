@@ -8,8 +8,8 @@
   {% assign maxtotalMinutes = words | divided_by:200 %}
 {% endif %}
   
-{% if mintotalMinutes = maxtotalMinutes %}
+{% if mintotalMinutes == maxtotalMinutes %}
   {% assign minutesText = mintotalMinutes | append: ' - ' | append: maxtotalMinutes | append: ' mins to read.' %}
 {% else %}
-{% assign minutesText = maxtotalMinutes | append: ' mins to read.' %}
+  {% assign minutesText = maxtotalMinutes | append: ' mins to read.' %}
 {% endif %}
