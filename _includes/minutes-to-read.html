@@ -4,7 +4,7 @@
   {% assign mintotalMinutes = 1 %}
   {% assign maxtotalMinutes = 1 %}
 {% else %}
-  {% assign maxtotalMinutes = words | divided_by:180 | round %}
+  {% assign maxtotalMinutes = words | divided_by:100 | round %}
   {% assign mintotalMinutes = words | divided_by:200 | round %}
 {% endif %}
   
