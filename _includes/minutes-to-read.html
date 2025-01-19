@@ -9,7 +9,7 @@
 {% endif %}
   
 {% if mintotalMinutes == maxtotalMinutes %}
-  {% assign minutesText = mintotalMinutes | append: ' - ' | append: maxtotalMinutes | append: ' mins to read.' %}
-{% else %}
   {% assign minutesText = maxtotalMinutes | append: ' mins to read.' %}
+{% else %}
+  {% assign minutesText = mintotalMinutes | append: ' - ' | append: maxtotalMinutes | append: ' mins to read.' %}
 {% endif %}
