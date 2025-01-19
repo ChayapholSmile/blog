@@ -3,8 +3,10 @@
 {% if words < 360 %}
   {% assign mintotalMinutes = 1 %}
   {% assign maxtotalMinutes = 1 %}
+  {% assign totalMinutes = 1 %}
 {% else %}
   {% assign maxtotalMinutes = words | divided_by:100 | round %}
+  {% assign totalMinutes = words | divided_by:100 | round %}
   {% assign mintotalMinutes = words | divided_by:200 | round %}
 {% endif %}
   
